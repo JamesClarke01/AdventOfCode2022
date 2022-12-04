@@ -1,0 +1,31 @@
+each section has an ID
+each elf has a range of IDs
+
+
+5-7,7-9  //if range1End >= Range2Start
+2-8,3-7  
+6-6,4-6  /
+2-6,4-8
+
+
+
+5-8,7-9 //if range1End >= Range2Start
+7-8, 1-3 //
+
+//5-8,7-9
+//if overlap starts on range 1
+if range1Start <= range2End //if range1 starts first
+
+	if range1End >= Range2Start  //is the end of range1 within range2
+
+
+//7-9, 5-8
+//if overlap starts on range 2
+if range2Start <= range1End //if range2 starts first
+ 
+	if range2End >= Range1Start  //is the end of range2 within range 1
+
+
+//realised that overlap means one range has to contain at least one point of the other range
+for each point in range1:
+    is point >= range2Start and point <= range2end
